@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        .card {
+            /* border: 4px solid green; */
+            box-shadow: 0 0 10px green;
+            padding: 10px;
+            width: 270px;
+            height: 400px;
+        }
+        #container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="root">
+
+    </div>
+
+    <script type="text/babel">
+
+        var imageUrl="https://static.vecteezy.com/system/resources/thumbnails/033/129/417/small/a-business-man-stands-against-white-background-with-his-arms-crossed-ai-generative-photo.jpg"
+
+        let card = (<div class="card">
+            <img src={imageUrl}
+                width="100%" height="200px" />
+
+            <h3>Chris John</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora possimus rem facere voluptate modi maxime placeat.</p>
+            <button>Profile Details</button>
+        </div>);
+
+        let container=( 
+            <div id="container">
+                {card}
+                {card}
+                {card}
+                {card}
+            </div>
+        );
+        ReactDOM.render(container, document.getElementById("root"));
+    </script>
+</body>
+
+</html>
