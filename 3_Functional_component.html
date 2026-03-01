@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        #container {
+            border: 2px solid red;
+            margin: 10px;
+        }
+
+        #container * {
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        function Container() {
+            return (
+                <div id="container">
+                    <h2>React JS</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi aliquid quasi sapiente illo recusandae quas distinctio perspiciatis earum vel, ducimus a, est fugiat cumque expedita debitis ut cupiditate fuga nihil consequatur exercitationem illum quod. Deserunt vel omnis unde, rem dolor inventore distinctio incidunt nobis placeat sapiente aperiam commodi excepturi, quasi cupiditate molestiae provident? Ipsum minus libero molestiae. Possimus atque quis sit? Officiis, sint. Laborum quod non, iure error deleniti pariatur at quisquam natus officia voluptatibus repudiandae ducimus quos, omnis quis eius quam ad aliquid fugit dignissimos animi maiores tenetur veniam aspernatur incidunt! Incidunt nulla odio cupiditate ratione, doloribus vero illum officiis enim, repudiandae quidem minima. Quia corrupti sapiente perferendis! Harum molestias debitis impedit aperiam optio. Molestiae autem ducimus non soluta. Eum quisquam vero laborum aliquam dolores inventore qui ratione porro excepturi veritatis tempora assumenda corporis sed alias nemo odio, vitae soluta deserunt ipsum cum saepe perspiciatis, voluptatem vel? Ducimus ipsa quam consectetur nemo eligendi nisi, voluptas totam nam fugit illo facilis minus officiis iure necessitatibus quia ad perferendis maiores veniam provident corrupti tempore accusantium quas! Aperiam perspiciatis sunt minima necessitatibus commodi rerum, quae possimus eum, doloribus maiores cumque neque porro est adipisci dolorem placeat saepe quos odio vel itaque consequuntur?</p>
+                    <button>More Details</button>
+                </div>
+            );
+        }
+
+        function MultipleContainer() {
+            return (
+                <div>
+                    <Container/>
+                    <Container/>
+                    <Container/>
+                </div>
+            );
+        }
+        ReactDOM.render(<MultipleContainer />, document.getElementById("root"));
+    </script>
+</body>
+
+</html>
