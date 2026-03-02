@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        function Header(){
+            return (
+                <div class="header flexcontainer">
+                    <h2>Header Component</h2>
+                </div>
+            );
+        }
+
+        function CreateCard(props) {
+            return <div class="card">
+                <img src={props.imglink}
+                    width="100%" height="200px" />
+
+                <h3> {props.title} </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora possimus rem facere voluptate modi maxime placeat.</p>
+                <button>Profile Details</button>
+            </div>;
+        }
+
+        function Main(){
+            return (
+                <div id="container" class="main flexcontainer">
+                    <CreateCard title="Vishnu" imglink="https://static.vecteezy.com/system/resources/thumbnails/033/129/417/small/a-business-man-stands-against-white-background-with-his-arms-crossed-ai-generative-photo.jpg"/>
+                    <CreateCard title="Ramu" imglink="https://t3.ftcdn.net/jpg/02/79/78/48/360_F_279784836_4eKMjfIfDtaICKmaSBAyft2Y43u5V76Q.jpg"/>
+                    <CreateCard title="Sitha" imglink="https://www.shutterstock.com/image-photo/portrait-successful-business-woman-suit-260nw-2468636115.jpg"/>
+                    <CreateCard title="Githa" imglink="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtJpldkUDbZS1GrO2KNncO094Tb7Sw1cbCSA&s"/>
+                </div>
+            );
+        }
+
+        function Footer(){
+            return (
+                <div class="foot flexcontainer">
+                    <h2>Footer Component</h2>
+                </div>
+            );
+        }
+
+        function App(){
+            return <div>
+                <Header/>
+                <Main/>
+                <Footer/>
+                </div>
+        }
+
+        ReactDOM.render(<App/>, document.getElementById("root"));
+    </script>
+</body>
+</html>

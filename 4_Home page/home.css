@@ -1,0 +1,44 @@
+* {
+    margin: 0px;
+}
+
+.header {
+    background-color: black;
+    height: 60px;
+    color: white;
+}
+
+.main {
+    background-color: lightgrey;
+}
+
+.foot {
+    height: 80px;
+    background-color: darkred;
+    color: white;
+}
+
+.flexcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    /* border: 4px solid green; */
+    box-shadow: 0 0 10px green;
+    padding: 10px;
+    width: 270px;
+    height: 400px;
+    margin:10px 4px;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.card *{
+    margin:10px 0px;
+}
